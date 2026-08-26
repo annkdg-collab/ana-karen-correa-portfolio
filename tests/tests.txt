@@ -1,0 +1,55 @@
+# Tests
+
+## Test 1 - Navegar con menú flotante desde cualquier posición [sanity]
+Viewport: desktop
+Covers: floating navigation, home navigation, section navigation, smooth scrolling
+Description: Verifies the persistent floating menu lets the user return home and jump to primary portfolio sections while scrolled.
+Steps:
+1. Open the portfolio and scroll to the Process section
+2. Click HOME in the floating navigation
+3. Open the floating navigation and click PROCESS
+Expected: The portfolio returns to Home and then scrolls to Process without leaving the page.
+
+## Test 2 - Agregar, reemplazar y conservar imágenes de un proyecto
+Viewport: desktop
+Covers: image upload, storage write, storage replacement, persistent gallery
+Description: Verifies project images remain available after upload and replacement.
+Steps:
+1. Open a project with image management enabled
+2. Click AGREGAR IMÁGENES and upload one image
+3. Refresh the page
+4. Open Gestionar imágenes, select the uploaded image, and replace it with another image
+5. Refresh the page
+Expected: The uploaded image is initially visible, the replacement is visible afterward, and the old image is no longer displayed.
+
+## Test 3 - Eliminar imagen de proyecto y conservar el cambio
+Viewport: desktop
+Covers: image selection, storage delete, destructive-action confirmation, persistent deletion
+Description: Verifies deleting a selected project image removes it durably.
+Steps:
+1. Open a project with stored images
+2. Open Gestionar imágenes
+3. Select one image
+4. Click ELIMINAR SELECCIONADAS and confirm
+5. Refresh the page
+Expected: The selected image remains deleted after reload.
+
+## Test 4 - Interacción de galería en móvil
+Viewport: mobile
+Covers: mobile gallery layout, responsive case study, image containment, no horizontal overflow
+Description: Verifies case study images remain usable on a 375px viewport.
+Steps:
+1. Open a case study at 375px wide
+2. Scroll through the case study gallery
+3. Open the image management controls if available
+Expected: Gallery content stays inside the viewport, important artwork is not cropped, and no horizontal scrolling is introduced.
+
+## Test 5 - Mostrar bot AKLEX en el Hero
+Viewport: mobile
+Covers: AKLEX bot resource, Hero asset rendering, responsive mobile bot placement
+Description: Verifies the uploaded AKLEX bot resource renders in the Hero without reserving an invisible column or covering the main copy.
+Steps:
+1. Open the portfolio at 375px wide
+2. Observe the Hero
+3. Scroll slightly within the page
+Expected: The AKLEX bot image is visible as the Hero visual, uses alt text 'Bot visual de AKLEX', remains inside the viewport, and does not cover the Hero copy.
